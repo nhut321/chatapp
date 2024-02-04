@@ -1,0 +1,14 @@
+.home {
+	display: flex;
+	height: 100vh;
+}
+
+.home-left {
+	width: 20%;
+	background-color: red;
+}
+
+.home-right {
+	width: 80%;
+	background-color: blue
+}

@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+}
+
+:root {
+  --primary-color-light: #C7C8CC;
+  --secondary-color-light: #F2EFE5;
+  --primary-color-dark: #474F7A;
+  --secondary-color-dark: #1F2544;
+}
