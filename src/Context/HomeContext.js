@@ -1,22 +1,38 @@
 import React, { createContext, useState } from 'react'
 
-export const MainContext = React.createContext()
+export const HomeContext = React.createContext()
 
-const MainContextProvider = ({children}) => {
+const HomeContextProvider = ({children}) => {
 	const [isLogin, setIsLogin] = useState(false)
+	const [isDark, setIsDark] = useState(true)
 	const handleLogin = () => {
 
 	}
 
+	//darkmode
+	const darkmodeStyle = {
+		darkSecond: ['--secondary-color-dark', '--text-dark'],
+		darkPrime: ['--primary-color-dark', '--text-dark'],
+		lightSecond: ['--secondary-color-light', '--text-light'],
+		lightPrime: ['--primary-color-light', '--text-light'],
+	}
+	const handleDarkmode = () => {
+		setIsDark(v => !v)
+	}
+
+
 	const data = {
 		isLogin,
-		setIsLogin
+		setIsLogin,
+		darkmodeStyle,
+		isDark,
+		handleDarkmode
 	}
 	return (
-		<MainContext.Provider value={data}>
+		<HomeContext.Provider value={data}>
 			{children}
-		</MainContext.Provider>
+		</HomeContext.Provider>
 	)
 }
 
-export default MainContextProvider
+export default HomeContextProvider

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  position: relative;
 }
 
 :root {
@@ -7,4 +8,47 @@
   --secondary-color-light: #F2EFE5;
   --primary-color-dark: #474F7A;
   --secondary-color-dark: #1F2544;
+  --text-dark: #fff;
+  --text-light: #032c51;
+  --active: #5162a5;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+/* Tùy biến scrollbar */
+::-webkit-scrollbar {
+  width: 10px; /* Độ rộng của scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0078FF; /* Màu của thanh scrollbar */
+  border-radius: 5px; /* Bo góc của thanh scrollbar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #0055CC; /* Màu khi hover vào thanh scrollbar */
+}
+
+.scrollbar {
+  position: absolute;
+    width: 6px;
+    height: 30px;
+    background-color: var(--primary-color-dark);
+    right: 0;
+    top: 0;
+    border-radius: 4px;
 }

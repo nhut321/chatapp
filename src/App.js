@@ -4,6 +4,7 @@ import './App.css';
 import Form from './Pages/Form'
 import MainContextProvider from './Context/HomeContext'
 import Home from './Pages/Home'
+import Darkmode from './components/Darkmode'
 
 function App() {
   console.log(<Home />)
@@ -13,7 +14,10 @@ function App() {
         {
           true
           ?
+          <>
+            
           <Home />
+          </>
           :
         <Form />
         }

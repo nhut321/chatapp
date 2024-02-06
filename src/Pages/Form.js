@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import './Style.css'; // Import CSS file for styling
-import { MainContext } from '../Context/HomeContext'
+import { HomeContext } from '../Context/HomeContext'
 
 function Form(handleLogin) {
   const [switchLogin, setSwitchLogin] = useState(true);
@@ -8,7 +8,7 @@ function Form(handleLogin) {
   const [loginPassword, setLoginPassword] = useState('');
   const [registerUsername, setRegisterUsername] = useState('');
   const [registerPassword, setRegisterPassword] = useState('');
-  const homeContext = useContext(MainContext)
+  const homeContext = useContext(HomeContext)
 
   const toggleForm = () => {
     setSwitchLogin(!switchLogin);
